@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ôn Tập - Đổi Mới 1986</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="review-page">
+
+    <div class="container review-container">
+        <div class="review-header">
+            <h2>Ôn Tập Kiến Thức</h2>
+            <button id="toggleSound" class="sound-btn"><i class="fas fa-volume-up"></i></button>
+        </div>
+
+        <div id="chapterSelect">
+            <p>Chọn chương (10 câu ngẫu nhiên):</p>
+            <select id="chapterDropdown">
+                <option value="1">Chương 1: Hoàn cảnh & Nguyên nhân</option>
+                <option value="2">Chương 2: Nội dung & Mục tiêu</option>
+                <option value="3">Chương 3: Giai đoạn 1996 – nay</option>
+                <option value="4">Chương 4: Thiết kế sản phẩm</option>
+                <option value="5">Chương 5: Cương lĩnh 2011</option>
+                <option value="6">Chương 6: Thành tựu</option>
+                <option value="7">Chương 7: Hạn chế</option>
+                <option value="8">Chương 8: Kết luận</option>
+            </select>
+            <button id="startQuiz">Bắt Đầu</button>
+        </div>
+
+        <div id="quizContainer" style="display:none;">
+            <div class="quiz-header">
+                <p><span id="questionNumber">1</span>/10</p>
+                <p>Điểm: <span id="score">0</span></p>
+            </div>
+            <div id="question"></div>
+            <div id="options"></div>
+            <button id="nextQuestion" style="display:none;">Câu tiếp</button>
+        </div>
+
+        <div id="resultContainer" style="display:none;">
+            <h3>Kết quả</h3>
+            <p id="finalScore"></p>
+            <button id="viewHistory">Xem Lịch Sử</button>
+            <button id="restartQuiz">Làm Lại</button>
+        </div>
+
+        <div id="historyContainer" style="display:none;">
+            <h3>Lịch Sử Ôn Tập</h3>
+            <ul id="historyList"></ul>
+            <button id="backToResult">Quay Lại</button>
+        </div>
+    </div>
+
+    <audio id="soundCorrect" src="https://assets.mixkit.co/sfx/preview/mixkit-correct-answer-tone-2870.mp3" preload="auto"></audio>
+    <audio id="soundWrong" src="https://assets.mixkit.co/sfx/preview/mixkit-wrong-answer-fail-notification-383.mp3" preload="auto"></audio>
+
+    <script src="review.js"></script>
+</body>
+</html>
